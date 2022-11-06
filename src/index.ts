@@ -4,6 +4,7 @@ import {
   ParseWordsFromText,
   ParseUnique,
   ParseStorageString,
+  createClipboardString,
 } from "./use-cases/index";
 
 export {
@@ -14,4 +15,5 @@ export {
   ParseWordsFromText,
   ParseUnique,
   ParseStorageString,
+  createClipboardString,
 };
