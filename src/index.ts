@@ -3,6 +3,7 @@ import {
   ParseWordsFromTimedText,
   ParseWordsFromText,
   ParseUnique,
+  ParseStorageString,
 } from "./use-cases/index";
 
 export {
@@ -12,4 +13,5 @@ export {
   ParseWordsFromTimedText,
   ParseWordsFromText,
   ParseUnique,
+  ParseStorageString,
 };
