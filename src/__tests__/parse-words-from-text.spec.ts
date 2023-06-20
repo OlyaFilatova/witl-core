@@ -45,4 +45,11 @@ describe("Parse Text", () => {
     expect(res[0].word.text).toBe("second");
     expect(res[0].count).toBe(2);
   });
+  it('should return list with two WordCount where word "second" goes first when "first second second" passed', () => {
+    const parseText: ParseWordsFromText = createParseText();
+    const res = parseText.parse("first second second").uniqueWordsRes;
+    expect(res.length).toBe(2);
+    expect(res[0].word.text).toBe("second");
+    expect(res[0].count).toBe(2);
+  });
 });

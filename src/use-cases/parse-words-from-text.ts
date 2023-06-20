@@ -139,9 +139,11 @@ export class ParseWordsFromText {
     existingKnownWords = uniqueWordsRes.filter(
       (element) => knownWords.indexOf(element.getWord().getText()) !== -1
     );
-    unknownWords = uniqueWordsRes.filter(
-      (element) => knownWords.indexOf(element.getWord().getText()) === -1
-    );
+    unknownWords = uniqueWordsRes
+      .filter(
+        (element) => knownWords.indexOf(element.getWord().getText()) === -1
+      )
+      .sort((a, b) => b.count - a.count);
 
     return {
       uniqueWordsRes: unknownWords,
