@@ -1,6 +1,6 @@
 {
   "name": "wntl-core",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "core logic for the what i need to learn pet project",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",

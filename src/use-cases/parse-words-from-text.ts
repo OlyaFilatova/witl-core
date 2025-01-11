@@ -11,6 +11,7 @@ export class ParseWordsFromText {
     cleanRootDoubles = false
   ): ParseResult {
     text = this.toSimpleText(text).toLowerCase();
+    console.log(text);
     const textWords = this.toList(text);
 
     const uniqueWordsRes = this.getUniqueWordsList(textWords, cleanRootDoubles);
@@ -28,8 +29,8 @@ export class ParseWordsFromText {
 
   protected toSimpleText(text: string) {
     return this.removeYoutubeTimedTextKeys(text)
+      .replace(/([^a-zA-Z 'áéíóúñÁÉÍÓÚÑ-])+/g, " ")
       .replace(/\n/g, " ")
-      .replace(/([^a-zA-Z '-])+/g, " ")
       .replace(/' /g, " ")
       .replace(/ '/g, " ")
       .replace(/- /g, " ")
